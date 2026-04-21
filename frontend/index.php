@@ -724,5 +724,85 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+    <script>
+(function() {
+    // Ждём полной загрузки страницы
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', init);
+    } else {
+        init();
+    }
+    
+    function init() {
+        const form = document.getElementById('supportForm');
+        if (!form) {
+            console.error('Форма supportForm не найдена');
+            return;
+        }
+        
+        console.log('Форма найдена, навешиваем обработчик');
+        
+        // Убираем старые обработчики
+        form.onsubmit = null;
+        
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            
+            console.log('Отправка через fetch');
+            
+            // Собираем данные
+            const formData = new FormData(form);
+            const data = {};
+            
+            for (let [key, value] of formData.entries()) {
+                if (key.endsWith('[]')) {
+                    const realKey = key.slice(0, -2);
+                    if (!data[realKey]) data[realKey] = [];
+                    data[realKey].push(value);
+                } else {
+                    data[key] = value;
+                }
+            }
+            
+            // Гарантируем чекбоксы
+            if (!data.contract) data.contract = 'on';
+            if (!data.consent) data.consent = 'on';
+            
+            console.log('Данные:', data);
+            
+            try {
+                const response = await fetch('../api.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                console.log('Ответ:', result);
+                
+                if (response.ok) {
+                    alert(`✅ Данные сохранены!\n\nЛогин: ${result.login}\nПароль: ${result.password}\n\nСохраните эти данные для входа.\n\nПрофиль: ${result.profile_url}`);
+                    window.location.href = result.profile_url;
+                } else if (result.errors) {
+                    let msg = '❌ Ошибки валидации:\n';
+                    for (let field in result.errors) {
+                        msg += `- ${result.errors[field]}\n`;
+                    }
+                    alert(msg);
+                } else {
+                    alert('❌ Ошибка: ' + (result.error || 'Неизвестная ошибка'));
+                }
+            } catch (err) {
+                console.error('Fetch error:', err);
+                alert('❌ Ошибка сети. Отправляем обычным способом.');
+                form.submit();
+            }
+        });
+    }
+})();
+</script>
 </body>
 </html>
