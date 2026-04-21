@@ -1582,3 +1582,247 @@ textarea {
 .tariff-card.selected {
     animation: tariffSelect 0.3s ease;
 }
+
+.contact-form {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    padding: 80px 0;
+}
+
+.contact-form .container {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 30px;
+    padding: 50px 40px;
+    max-width: 700px;
+    margin: 0 auto;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.contact-form h2 {
+    color: #2d3748;
+    font-size: 2rem;
+    margin-bottom: 30px;
+    text-align: center;
+    position: relative;
+}
+
+.contact-form h2:after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+/* Поля ввода */
+.contact-form .form-group {
+    margin-bottom: 25px;
+}
+
+.contact-form .form-group label {
+    display: block;
+    font-weight: 600;
+    color: #2d3748;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form select {
+    width: 100%;
+    padding: 14px 18px;
+    border: 2px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #f8fafc;
+    font-family: inherit;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus,
+.contact-form select:focus {
+    outline: none;
+    border-color: #667eea;
+    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+    background: white;
+}
+
+.contact-form .radio-group {
+    display: flex;
+    gap: 30px;
+    padding: 10px 0;
+}
+
+.contact-form .radio-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    color: #4a5568;
+    font-weight: 500;
+}
+
+.contact-form .radio-label input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #667eea;
+}
+
+.contact-form select[multiple] {
+    min-height: 140px;
+    padding: 10px;
+}
+
+.contact-form select[multiple] option {
+    padding: 8px 12px;
+    border-radius: 8px;
+    margin: 2px 0;
+    cursor: pointer;
+}
+
+.contact-form select[multiple] option:checked {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.contact-form .checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 5px 0;
+}
+
+.contact-form .checkbox-group input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    accent-color: #667eea;
+}
+
+.contact-form .checkbox-group label {
+    font-weight: 500;
+    color: #2d3748;
+    cursor: pointer;
+    line-height: 1.4;
+}
+
+.contact-form .btn-submit {
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+}
+
+.contact-form .btn-submit:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+}
+
+.contact-form .btn-submit:active {
+    transform: translateY(0);
+}
+
+.contact-form .hint {
+    display: block;
+    font-size: 0.75rem;
+    color: #718096;
+    margin-top: 6px;
+    margin-left: 5px;
+}
+
+.contact-form .error-hint {
+    display: block;
+    font-size: 0.75rem;
+    color: #e53e3e;
+    margin-top: 6px;
+    margin-left: 5px;
+    font-weight: 500;
+}
+
+.contact-form .error-field {
+    border-color: #f56565 !important;
+    background-color: #fff5f5 !important;
+}
+
+.contact-form .contact-info {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px dashed #e2e8f0;
+}
+
+.contact-form .contact-info p {
+    margin: 10px 0;
+    font-size: 1rem;
+    color: #4a5568;
+}
+
+.contact-form .contact-info i {
+    margin-right: 10px;
+    color: #667eea;
+    width: 25px;
+}
+
+
+.contact-form .auth-links {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+}
+
+.contact-form .auth-links p {
+    margin: 10px 0;
+}
+
+.contact-form .auth-links a {
+    color: #667eea;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.contact-form .auth-links a:hover {
+    color: #764ba2;
+    text-decoration: underline;
+}
+
+.contact-form .admin-link {
+    font-size: 0.75rem;
+    color: #a0aec0 !important;
+}
+
+.contact-form .admin-link:hover {
+    color: #718096 !important;
+}
+
+
+@media (max-width: 640px) {
+    .contact-form .container {
+        padding: 30px 20px;
+        margin: 0 15px;
+    }
+    
+    .contact-form .radio-group {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .contact-form .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+}
