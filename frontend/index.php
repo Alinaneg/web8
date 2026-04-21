@@ -565,42 +565,50 @@
                 </div>
             </div>
         </section>
-       <section class="contact-form" id="form">
+        <section class="contact-form" id="form">
     <div class="container">
-        <h2>Оставить заявку на поддержку сайта</h2>
+        <h2>Оставить заявку</h2>
         
         <form id="supportForm" method="POST" action="../api.php" data-api-url="../api.php">
             <input type="hidden" id="apiUrl" value="../api.php">
             
             <div class="form-row">
                 <div class="form-group">
-                    <input type="text" id="fullName" name="fullName" placeholder="ФИО *" required>
+                    <label for="fullName">ФИО *</label>
+                    <input type="text" id="fullName" name="fullName" placeholder="Иванов Иван Иванович" required>
                 </div>
                 <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Email *" required>
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" placeholder="ivan@example.com" required>
                 </div>
             </div>
             
             <div class="form-row">
                 <div class="form-group">
-                    <input type="tel" id="phone" name="phone" placeholder="Телефон">
+                    <label for="phone">Телефон</label>
+                    <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67">
                 </div>
                 <div class="form-group">
-                    <input type="date" id="birth" name="birth" placeholder="Дата рождения">
+                    <label for="birth">Дата рождения</label>
+                    <input type="date" id="birth" name="birth">
                 </div>
             </div>
             
             <div class="form-group">
                 <label>Пол</label>
-                <div style="display: flex; gap: 20px; margin-top: 10px;">
-                    <label><input type="radio" name="gender" value="male" checked> Мужской</label>
-                    <label><input type="radio" name="gender" value="female"> Женский</label>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="gender" value="male" checked> Мужской
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="gender" value="female"> Женский
+                    </label>
                 </div>
             </div>
             
             <div class="form-group">
                 <label for="langs">Любимые языки программирования *</label>
-                <select id="langs" name="langs[]" multiple size="4" style="width: 100%; padding: 10px;">
+                <select id="langs" name="langs[]" multiple size="4">
                     <?php
                     require_once __DIR__ . '/../init.php';
                     foreach ($all_languages as $lang): 
@@ -608,34 +616,32 @@
                         <option value="<?= $lang['id'] ?>"><?= htmlspecialchars($lang['name']) ?></option>
                     <?php endforeach; ?>
                 </select>
-                <small>Зажмите Ctrl/Cmd для выбора нескольких</small>
+                <small class="hint"> Зажмите Ctrl (Cmd) для выбора нескольких языков</small>
             </div>
             
             <div class="form-group">
-                <textarea id="bio" name="bio" rows="3" placeholder="Биография"></textarea>
+                <label for="bio">Биография</label>
+                <textarea id="bio" name="bio" rows="3" placeholder="Расскажите немного о себе..."></textarea>
             </div>
             
-            <div class="checkbox">
+            <div class="checkbox-group">
                 <input type="checkbox" id="contract" name="contract" required>
                 <label for="contract">С контрактом ознакомлен(а) *</label>
             </div>
             
-            <div class="checkbox">
+            <div class="checkbox-group">
                 <input type="checkbox" id="consent" name="consent" required>
-                <label for="consent">Я согласен на обработку персональных данных *</label>
+                <label for="consent">Я согласен(а) на обработку персональных данных *</label>
             </div>
             
-            <button type="submit" class="btn-submit">Отправить заявку</button>
+            <button type="submit" class="btn-submit"> Отправить заявку</button>
             
             <div id="formMessage" class="form-message"></div>
         </form>
         
-        <!-- ССЫЛКИ НА ВХОД И АДМИНКУ -->
-        <div style="text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.2);">
-            <p>Уже есть логин и пароль? <a href="../login.php" style="color: #e83333; text-decoration: none; font-weight: 500;">Войти в личный кабинет</a></p>
-            <p style="margin-top: 10px; font-size: 0.8rem;">
-                <a href="../admin.php" style="color: rgba(255,255,255,0.6); text-decoration: none;">🔧 Панель администратора</a>
-            </p>
+        <div class="auth-links">
+            <p> Уже есть логин и пароль? <a href="../login.php">Войти в личный кабинет</a></p>
+            <p><a href="../admin.php" class="admin-link">🔧 Панель администратора</a></p>
         </div>
         
         <div class="contact-info">
@@ -644,7 +650,7 @@
         </div>
     </div>
 </section>
-    </main>
+          </main>
 
     <footer class="footer">
         <div class="container">
