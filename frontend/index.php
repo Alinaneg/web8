@@ -1,3 +1,6 @@
+<?php
+require_once __DIR__ . '/../init.php';
+?>
 <!DOCTYPE html>
 <html lang="ru">
 <head>
@@ -55,13 +58,11 @@
                         <li class="nav-item"><a href="#" class="nav-link">КОНТАКТЫ</a></li>
                     </ul>
                     
-
                     <div class="mobile-menu-btn">
                         <i class="fas fa-bars"></i>
                     </div>
                 </div>
                 
-
                 <ul class="mobile-menu">
                     <li><a href="#" class="mobile-menu-link">Поддержка Drupal <i class="fas fa-chevron-down"></i></a>
                         <ul class="mobile-submenu">
@@ -97,172 +98,167 @@
     </header>
 
     <main>
-
         <section class="experience">
-    <div class="container">
-        <h2><span class="highlight">13 лет</span> совершенствуем компетенции в Drupal поддержке!</h2>
-        <p class="section-subtitle">Разрабатываем и оптимизируем модули, расширяем функциональность сайтов, обновляем дизайн</p>
-        
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">
-                    <img src="competency-1.svg" alt="Добавление информации">
-                </div>
-                <h3>Добавление информации на сайт, создание новых разделов</h3>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <img src="competency-2.svg" alt="Разработка и оптимизация">
-                </div>
-                <h3>Разработка и оптимизация модулей сайта</h3>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <img src="competency-3.svg" alt="Интеграция">
-                </div>
-                <h3>Интеграция с CRM, 1С, платежными системами, любыми веб-сервисами</h3>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <img src="competency-4.svg" alt="Доработки">
-                </div>
-                <h3>Любые доработки функционала и дизайна</h3>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <img src="competency-5.svg" alt="Безопасность">
-                </div>
-                <h3>Аудит и мониторинг безопасности Drupal сайтов</h3>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <img src="competency-6.svg" alt="Миграция">
-                </div>
-                <h3>Миграция, импорт контента и апгрейд Drupal</h3>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <img src="competency-7.svg" alt="Оптимизация">
-                </div>
-                <h3>Оптимизация и ускорение Drupal-сайтов</h3>
-            </div>
-            <div class="service-card">
-                <div class="service-icon">
-                    <img src="competency-8.svg" alt="SEO">
-                </div>
-                <h3>Веб-маркетинг, консультации и работы по SEO</h3>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="advantages">
-    <div class="container">
-        <h2>Поддержка от <span class="highlight">Drupal-coder</span></h2>
-        <div class="advantages-grid">
-            <div class="advantage-card">
-                <div class="advantage-number">01</div>
-                <h3>Постановка задачи по Email</h3>
-                <p>Удобная и привычная модель постановки задач, при которой задачи фиксируются и никогда не теряются.</p>
-                <div class="advantage-image">
-                    <img src="support1.svg" alt="Email задачи">
-                </div>
-            </div>
-            <div class="advantage-card">
-                <div class="advantage-number">02</div>
-                <h3>Система Helpdesk - отчетность, прозрачность</h3>
-                <p>Возможность посмотреть все заявки в работе и отработанные часы в личном кабинете через браузер.</p>
-                <div class="advantage-image">
-                    <img src="support2.svg" alt="Helpdesk система">
-                </div>
-            </div>
-            <div class="advantage-card">
-                <div class="advantage-number">03</div>
-                <h3>Расширенная техническая поддержка</h3>
-                <p>Возможность организации расширенной техподдержки с 6:00 до 22:00 без выходных.</p>
-                <div class="advantage-image">
-                    <img src="support3.svg" alt="Техподдержка">
-                </div>
-            </div>
-            <div class="advantage-card">
-                <div class="advantage-number">04</div>
-                <h3>Персональный менеджер проекта</h3>
-                <p>Ваш менеджер проекта всегда в курсе текущего состояния проекта и в любой момент готов ответить на любые вопросы.</p>
-                <div class="advantage-image">
-                    <img src="support4.svg" alt="Менеджер проекта">
-                </div>
-            </div>
-            <div class="advantage-card">
-                <div class="advantage-number">05</div>
-                <h3>Удобные способы оплаты</h3>
-                <p>Безналичный расчет по договору или электронные деньги: WebMoney, Яндекс.Деньги, Paypal.</p>
-                <div class="advantage-image">
-                    <img src="support5.svg" alt="Способы оплаты">
-                </div>
-            </div>
-            <div class="advantage-card">
-                <div class="advantage-number">06</div>
-                <h3>Работаем с SLA и NDA</h3>
-                <p>Работа в рамках соглашений о конфиденциальности и об уровне качества работ.</p>
-                <div class="advantage-image">
-                    <img src="support6.svg" alt="SLA и NDA">
-                </div>
-            </div>
-            <div class="advantage-card">
-                <div class="advantage-number">07</div>
-                <h3>Штатные специалисты</h3>
-                <p>Надежные штатные специалисты, никаких фрилансеров.</p>
-                <div class="advantage-image">
-                    <img src="support7.svg" alt="Штатные специалисты">
-                </div>
-            </div>
-            <div class="advantage-card">
-                <div class="advantage-number">08</div>
-                <h3>Удобные каналы связи</h3>
-                <p>Консультации по телефону, скайпу, в мессенджерах.</p>
-                <div class="advantage-image">
-                    <img src="support8.svg" alt="Каналы связи">
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-          
-<section class="expertise-section">
-    <div class="container">
-        <div class="expertise-wrapper">
-            <div class="expertise-image">
-                <img src="laptop.png" alt="Экспертиза в Drupal">
-            </div>
-            <div class="expertise-content">
-                <h2 style="color: #d6d7d7";>Экспертиза в Drupal, <span class="highlight">опыт 14 лет!</span></h2>
+            <div class="container">
+                <h2><span class="highlight">13 лет</span> совершенствуем компетенции в Drupal поддержке!</h2>
+                <p class="section-subtitle">Разрабатываем и оптимизируем модули, расширяем функциональность сайтов, обновляем дизайн</p>
                 
-                <div class="expertise-blocks">
-                    <div class="expertise-block">
-                        <h3>Только системный подход</h3>
-                        <p>Контроль версий, резервирование и тестирование!</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="competency-1.svg" alt="Добавление информации">
+                        </div>
+                        <h3>Добавление информации на сайт, создание новых разделов</h3>
                     </div>
-                    <div class="expertise-block">
-                        <h3>Участвуем в разработке ядра Drupal</h3>
-                        <p>Разрабатываем модули на Drupal.org и создаем свои модули Drupal</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="competency-2.svg" alt="Разработка и оптимизация">
+                        </div>
+                        <h3>Разработка и оптимизация модулей сайта</h3>
                     </div>
-                    
-                    <div class="expertise-block">
-                        <h3>Только Drupal сайты</h3>
-                        <p>Не берем на поддержку сайты на других CMS!</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="competency-3.svg" alt="Интеграция">
+                        </div>
+                        <h3>Интеграция с CRM, 1С, платежными системами, любыми веб-сервисами</h3>
                     </div>
-                    
-                    <div class="expertise-block">
-                        <h3>Поддерживаем все версии</h3>
-                        <p>Поддерживаем сайты на Drupal 5, 6, 7 и 8</p>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="competency-4.svg" alt="Доработки">
+                        </div>
+                        <h3>Любые доработки функционала и дизайна</h3>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="competency-5.svg" alt="Безопасность">
+                        </div>
+                        <h3>Аудит и мониторинг безопасности Drupal сайтов</h3>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="competency-6.svg" alt="Миграция">
+                        </div>
+                        <h3>Миграция, импорт контента и апгрейд Drupal</h3>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="competency-7.svg" alt="Оптимизация">
+                        </div>
+                        <h3>Оптимизация и ускорение Drupal-сайтов</h3>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="competency-8.svg" alt="SEO">
+                        </div>
+                        <h3>Веб-маркетинг, консультации и работы по SEO</h3>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-  
+        </section>
 
+        <section class="advantages">
+            <div class="container">
+                <h2>Поддержка от <span class="highlight">Drupal-coder</span></h2>
+                <div class="advantages-grid">
+                    <div class="advantage-card">
+                        <div class="advantage-number">01</div>
+                        <h3>Постановка задачи по Email</h3>
+                        <p>Удобная и привычная модель постановки задач, при которой задачи фиксируются и никогда не теряются.</p>
+                        <div class="advantage-image">
+                            <img src="support1.svg" alt="Email задачи">
+                        </div>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-number">02</div>
+                        <h3>Система Helpdesk - отчетность, прозрачность</h3>
+                        <p>Возможность посмотреть все заявки в работе и отработанные часы в личном кабинете через браузер.</p>
+                        <div class="advantage-image">
+                            <img src="support2.svg" alt="Helpdesk система">
+                        </div>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-number">03</div>
+                        <h3>Расширенная техническая поддержка</h3>
+                        <p>Возможность организации расширенной техподдержки с 6:00 до 22:00 без выходных.</p>
+                        <div class="advantage-image">
+                            <img src="support3.svg" alt="Техподдержка">
+                        </div>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-number">04</div>
+                        <h3>Персональный менеджер проекта</h3>
+                        <p>Ваш менеджер проекта всегда в курсе текущего состояния проекта и в любой момент готов ответить на любые вопросы.</p>
+                        <div class="advantage-image">
+                            <img src="support4.svg" alt="Менеджер проекта">
+                        </div>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-number">05</div>
+                        <h3>Удобные способы оплаты</h3>
+                        <p>Безналичный расчет по договору или электронные деньги: WebMoney, Яндекс.Деньги, Paypal.</p>
+                        <div class="advantage-image">
+                            <img src="support5.svg" alt="Способы оплаты">
+                        </div>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-number">06</div>
+                        <h3>Работаем с SLA и NDA</h3>
+                        <p>Работа в рамках соглашений о конфиденциальности и об уровне качества работ.</p>
+                        <div class="advantage-image">
+                            <img src="support6.svg" alt="SLA и NDA">
+                        </div>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-number">07</div>
+                        <h3>Штатные специалисты</h3>
+                        <p>Надежные штатные специалисты, никаких фрилансеров.</p>
+                        <div class="advantage-image">
+                            <img src="support7.svg" alt="Штатные специалисты">
+                        </div>
+                    </div>
+                    <div class="advantage-card">
+                        <div class="advantage-number">08</div>
+                        <h3>Удобные каналы связи</h3>
+                        <p>Консультации по телефону, скайпу, в мессенджерах.</p>
+                        <div class="advantage-image">
+                            <img src="support8.svg" alt="Каналы связи">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+          
+        <section class="expertise-section">
+            <div class="container">
+                <div class="expertise-wrapper">
+                    <div class="expertise-image">
+                        <img src="laptop.png" alt="Экспертиза в Drupal">
+                    </div>
+                    <div class="expertise-content">
+                        <h2 style="color: #d6d7d7">Экспертиза в Drupal, <span class="highlight">опыт 14 лет!</span></h2>
+                        
+                        <div class="expertise-blocks">
+                            <div class="expertise-block">
+                                <h3>Только системный подход</h3>
+                                <p>Контроль версий, резервирование и тестирование!</p>
+                            </div>
+                            <div class="expertise-block">
+                                <h3>Участвуем в разработке ядра Drupal</h3>
+                                <p>Разрабатываем модули на Drupal.org и создаем свои модули Drupal</p>
+                            </div>
+                            <div class="expertise-block">
+                                <h3>Только Drupal сайты</h3>
+                                <p>Не берем на поддержку сайты на других CMS!</p>
+                            </div>
+                            <div class="expertise-block">
+                                <h3>Поддерживаем все версии</h3>
+                                <p>Поддерживаем сайты на Drupal 5, 6, 7 и 8</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section class="tariffs" id="tariffs">
             <div class="container">
@@ -319,93 +315,91 @@
             </div>
         </section>
 
+        <section class="developers-tasks">
+            <div class="container">
+                <h2>Наши профессиональные разработчики выполняют быстро любые задачи</h2>
+                
+                <div class="tasks-grid">
+                    <div class="task-card">
+                        <div class="task-image">
+                            <img src="competency-20.svg" alt="Настройка аналитики">
+                        </div>
+                        <div class="task-content">
+                            <div class="task-time">от 1ч</div>
+                            <h3 class="task-title">Настройка события СА в интернет-магазине</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="task-card">
+                        <div class="task-image">
+                            <img src="competency-21.svg" alt="Мобильная версия">
+                        </div>
+                        <div class="task-content">
+                            <div class="task-time">от 20ч</div>
+                            <h3 class="task-title">Разработка мобильной версии сайта</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="task-card">
+                        <div class="task-image">
+                            <img src="competency-22.svg" alt="Интеграция оплаты">
+                        </div>
+                        <div class="task-content">
+                            <div class="task-time">от 8ч</div>
+                            <h3 class="task-title">Интеграция модуля оплаты</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-<section class="developers-tasks">
-    <div class="container">
-        <h2>Наши профессиональные разработчики выполняют быстро любые задачи</h2>
-        
-        <div class="tasks-grid">
-            <div class="task-card">
-                <div class="task-image">
-                    <img src="competency-20.svg" alt="Настройка аналитики">
-                </div>
-                <div class="task-content">
-                    <div class="task-time">от 1ч</div>
-                    <h3 class="task-title">Настройка события СА в интернет-магазине</h3>
+        <section class="team">
+            <div class="container">
+                <h2>Наша команда</h2>
+                
+                <div class="team-grid">
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="IMG_2472_0.jpg" alt="Сергей Синица">
+                        </div>
+                        <h3>Сергей Синица</h3>
+                        <p class="member-position">Руководитель отдела веб-разработки, канд. техн. наук, заместитель директора</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="IMG_2539_0.jpg" alt="Роман Агабеков">
+                        </div>
+                        <h3>Роман Агабеков</h3>
+                        <p class="member-position">Руководитель отдела DevOPS, директор</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="IMG_2474_1.jpg" alt="Алексей Синица">
+                        </div>
+                        <h3>Алексей Синица</h3>
+                        <p class="member-position">Руководитель отдела поддержки сайтов</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="IMG_2522_0.jpg" alt="Дарья Бочкарёва">
+                        </div>
+                        <h3>Дарья Бочкарёва</h3>
+                        <p class="member-position">Руководитель отдела продвижения, контекстной рекламы, контент-поддержки сайтов</p>
+                    </div>
+                    
+                    <div class="team-member">
+                        <div class="member-photo">
+                            <img src="IMG_9971_16.jpg" alt="Ирина Торкунова">
+                        </div>
+                        <h3>Ирина Торкунова</h3>
+                        <p class="member-position">Менеджер по работе с клиентами</p>
+                    </div>
                 </div>
             </div>
-            
-            <div class="task-card">
-                <div class="task-image">
-                    <img src="competency-21.svg" alt="Мобильная версия">
-                </div>
-                <div class="task-content">
-                    <div class="task-time">от 20ч</div>
-                    <h3 class="task-title">Разработка мобильной версии сайта</h3>
-                </div>
-            </div>
-            
-            <div class="task-card">
-                <div class="task-image">
-                    <img src="competency-22.svg" alt="Интеграция оплаты">
-                </div>
-                <div class="task-content">
-                    <div class="task-time">от 8ч</div>
-                    <h3 class="task-title">Интеграция модуля оплаты</h3>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-<section class="team">
-    <div class="container">
-        <h2>Наша команда</h2>
-        
-        <div class="team-grid">
-            <div class="team-member">
-                <div class="member-photo">
-                    <img src="IMG_2472_0.jpg" alt="Сергей Синица">
-                </div>
-                <h3>Сергей Синица</h3>
-                <p class="member-position">Руководитель отдела веб-разработки, канд. техн. наук, заместитель директора</p>
-            </div>
-            
-            <div class="team-member">
-                <div class="member-photo">
-                    <img src="IMG_2539_0.jpg" alt="Роман Агабеков">
-                </div>
-                <h3>Роман Агабеков</h3>
-                <p class="member-position">Руководитель отдела DevOPS, директор</p>
-            </div>
-            
-            <div class="team-member">
-                <div class="member-photo">
-                    <img src="IMG_2474_1.jpg" alt="Алексей Синица">
-                </div>
-                <h3>Алексей Синица</h3>
-                <p class="member-position">Руководитель отдела поддержки сайтов</p>
-            </div>
-            
-            <div class="team-member">
-                <div class="member-photo">
-                    <img src="IMG_2522_0.jpg" alt="Дарья Бочкарёва">
-                </div>
-                <h3>Дарья Бочкарёва</h3>
-                <p class="member-position">Руководитель отдела продвижения, контекстной рекламы, контент-поддержки сайтов</p>
-            </div>
-            
-            <div class="team-member">
-                <div class="member-photo">
-                    <img src="IMG_9971_16.jpg" alt="Ирина Торкунова">
-                </div>
-                <h3>Ирина Торкунова</h3>
-                <p class="member-position">Менеджер по работе с клиентами</p>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <section class="cases">
             <div class="container">
@@ -467,7 +461,6 @@
             </div>
         </section>
 
-
         <section class="testimonials">
             <div class="container">
                 <h2>Отзывы</h2>
@@ -491,33 +484,34 @@
             </div>
         </section>
 
-<section class="clients">
-    <div class="container">
-        <h2>С нами работают</h2>
-        <p class="section-subtitle">Десятки компаний доверяют нам самое ценное, что у них есть в интернете - свои сайты. Мы делаем все, чтобы наше сотрудничество было долгим.</p>
-        
-        <div class="clients-grid">
-            <div class="client-logo">
-                <img src="logo_0.png" alt="Логотип клиента 1">
+        <section class="clients">
+            <div class="container">
+                <h2>С нами работают</h2>
+                <p class="section-subtitle">Десятки компаний доверяют нам самое ценное, что у них есть в интернете - свои сайты. Мы делаем все, чтобы наше сотрудничество было долгим.</p>
+                
+                <div class="clients-grid">
+                    <div class="client-logo">
+                        <img src="logo_0.png" alt="Логотип клиента 1">
+                    </div>
+                    <div class="client-logo">
+                        <img src="logo_2.png" alt="Логотип клиента 2">
+                    </div>
+                    <div class="client-logo">
+                        <img src="logo-estee.png" alt="Логотип клиента 3">
+                    </div>
+                    <div class="client-logo">
+                        <img src="logo.png" alt="Логотип клиента 4">
+                    </div>
+                    <div class="client-logo">
+                        <img src="lpcma_rus_v4.jpg" alt="Логотип клиента 5">
+                    </div>
+                    <div class="client-logo">
+                        <img src="nashagazeta_ch.png" alt="Логотип клиента 6">
+                    </div>
+                </div>
             </div>
-            <div class="client-logo">
-                <img src="logo_2.png" alt="Логотип клиента 2">
-            </div>
-            <div class="client-logo">
-                <img src="logo-estee.png" alt="Логотип клиента 3">
-            </div>
-            <div class="client-logo">
-                <img src="logo.png" alt="Логотип клиента 4">
-            </div>
-            <div class="client-logo">
-                <img src="lpcma_rus_v4.jpg" alt="Логотип клиента 5">
-            </div>
-            <div class="client-logo">
-                <img src="nashagazeta_ch.png" alt="Логотип клиента 6">
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
+
         <section class="faq">
             <div class="container">
                 <h2>Часто задаваемые вопросы</h2>
@@ -565,92 +559,87 @@
                 </div>
             </div>
         </section>
+
+        <!-- ФОРМА — ОБЫЧНАЯ ОТПРАВКА НА БЭКЕНД -->
         <section class="contact-form" id="form">
-    <div class="container">
-        <h2>Оставить заявку</h2>
-        
-        <form id="supportForm" method="POST" action="../api.php" onsubmit="event.preventDefault(); sendFormData();">
-            <input type="hidden" id="apiUrl" value="../api.php">
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="fullName">ФИО *</label>
-                    <input type="text" id="fullName" name="fullName" placeholder="Иванов Иван Иванович" required>
+            <div class="container">
+                <h2>Оставить заявку</h2>
+                
+                <form method="POST" action="../index.php">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">ФИО *</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Иванов Иван Иванович" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="ivan@example.com" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Телефон</label>
+                            <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67">
+                        </div>
+                        <div class="form-group">
+                            <label for="birth">Дата рождения</label>
+                            <input type="date" id="birth" name="birth">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Пол</label>
+                        <div class="radio-group">
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="male" checked> Мужской
+                            </label>
+                            <label class="radio-label">
+                                <input type="radio" name="gender" value="female"> Женский
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="langs">Любимые языки программирования *</label>
+                        <select id="langs" name="langs[]" multiple size="4">
+                            <?php foreach ($all_languages as $lang): ?>
+                                <option value="<?= $lang['id'] ?>"><?= htmlspecialchars($lang['name']) ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                        <small class="hint"> Зажмите Ctrl (Cmd) для выбора нескольких языков</small>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bio">Биография</label>
+                        <textarea id="bio" name="bio" rows="3" placeholder="Расскажите немного о себе..."></textarea>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="contract" name="contract" required>
+                        <label for="contract">С контрактом ознакомлен(а) *</label>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="consent" name="consent" required>
+                        <label for="consent">Я согласен(а) на обработку персональных данных *</label>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit"> Отправить заявку</button>
+                </form>
+                
+                <div class="auth-links">
+                    <p> <a href="../login.php">Войти в личный кабинет</a> — если у вас уже есть логин и пароль</p>
+                    <p><a href="../admin.php" class="admin-link">🔧 Панель администратора</a></p>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email *</label>
-                    <input type="email" id="email" name="email" placeholder="ivan@example.com" required>
+                
+                <div class="contact-info">
+                    <p><i class="fas fa-phone"></i> 8 800 222-26-73</p>
+                    <p><i class="fas fa-envelope"></i> info@drupal-coder.ru</p>
                 </div>
             </div>
-            
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="phone">Телефон</label>
-                    <input type="tel" id="phone" name="phone" placeholder="+7 (999) 123-45-67">
-                </div>
-                <div class="form-group">
-                    <label for="birth">Дата рождения</label>
-                    <input type="date" id="birth" name="birth">
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label>Пол</label>
-                <div class="radio-group">
-                    <label class="radio-label">
-                        <input type="radio" name="gender" value="male" checked> Мужской
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" name="gender" value="female"> Женский
-                    </label>
-                </div>
-            </div>
-            
-            <div class="form-group">
-                <label for="langs">Любимые языки программирования *</label>
-                <select id="langs" name="langs[]" multiple size="4">
-                    <?php
-                    require_once __DIR__ . '/../init.php';
-                    foreach ($all_languages as $lang): 
-                    ?>
-                        <option value="<?= $lang['id'] ?>"><?= htmlspecialchars($lang['name']) ?></option>
-                    <?php endforeach; ?>
-                </select>
-                <small class="hint"> Зажмите Ctrl (Cmd) для выбора нескольких языков</small>
-            </div>
-            
-            <div class="form-group">
-                <label for="bio">Биография</label>
-                <textarea id="bio" name="bio" rows="3" placeholder="Расскажите немного о себе..."></textarea>
-            </div>
-            
-            <div class="checkbox-group">
-                <input type="checkbox" id="contract" name="contract" required>
-                <label for="contract">С контрактом ознакомлен(а) *</label>
-            </div>
-            
-            <div class="checkbox-group">
-                <input type="checkbox" id="consent" name="consent" required>
-                <label for="consent">Я согласен(а) на обработку персональных данных *</label>
-            </div>
-            
-            <button type="submit" class="btn-submit"> Отправить заявку</button>
-            
-            <div id="formMessage" class="form-message"></div>
-        </form>
-        
-        <div class="auth-links">
-            <p> Уже есть логин и пароль? <a href="../login.php">Войти в личный кабинет</a></p>
-            <p><a href="../admin.php" class="admin-link">🔧 Панель администратора</a></p>
-        </div>
-        
-        <div class="contact-info">
-            <p><i class="fas fa-phone"></i> 8 800 222-26-73</p>
-            <p><i class="fas fa-envelope"></i> info@drupal-coder.ru</p>
-        </div>
-    </div>
-</section>
-          </main>
+        </section>
+    </main>
 
     <footer class="footer">
         <div class="container">
@@ -661,197 +650,5 @@
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="script.js"></script>
-    <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('supportForm');
-    const apiUrl = '../api.php';
-    
-    if (!form) return;
-    
-    form.addEventListener('submit', async function(e) {
-        e.preventDefault();
-        
-        // Собираем данные в объект
-        const formData = new FormData(form);
-        const data = {};
-        
-        for (let [key, value] of formData.entries()) {
-            if (key.endsWith('[]')) {
-                const realKey = key.slice(0, -2);
-                if (!data[realKey]) data[realKey] = [];
-                data[realKey].push(value);
-            } else {
-                data[key] = value;
-            }
-        }
-        
-        // Добавляем чекбоксы, если их нет (для безопасности)
-        if (!data.contract) data.contract = 'on';
-        if (!data.consent) data.consent = 'on';
-        
-        console.log('Отправляем:', data);
-        
-        try {
-            const response = await fetch(apiUrl, {
-                method: 'POST',
-                headers: { 
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify(data)
-            });
-            
-            const result = await response.json();
-            
-            if (response.ok) {
-                alert(`✅ Данные сохранены!\n\nЛогин: ${result.login}\nПароль: ${result.password}\n\nСохраните эти данные для входа.\n\nПрофиль: ${result.profile_url}`);
-                window.location.href = result.profile_url;
-            } else {
-                if (result.errors) {
-                    let msg = 'Ошибки валидации:\n';
-                    for (let field in result.errors) {
-                        msg += `- ${result.errors[field]}\n`;
-                    }
-                    alert(msg);
-                } else {
-                    alert('❌ Ошибка: ' + (result.error || 'Неизвестная ошибка'));
-                }
-            }
-        } catch (err) {
-            console.error('Fetch error:', err);
-            alert('❌ Ошибка сети. Форма будет отправлена обычным способом.');
-            form.submit();
-        }
-    });
-});
-</script>
-    <script>
-(function() {
-    // Ждём полной загрузки страницы
-    if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init);
-    } else {
-        init();
-    }
-    
-    function init() {
-        const form = document.getElementById('supportForm');
-        if (!form) {
-            console.error('Форма supportForm не найдена');
-            return;
-        }
-        
-        console.log('Форма найдена, навешиваем обработчик');
-        
-        // Убираем старые обработчики
-        form.onsubmit = null;
-        
-        form.addEventListener('submit', async function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            console.log('Отправка через fetch');
-            
-            // Собираем данные
-            const formData = new FormData(form);
-            const data = {};
-            
-            for (let [key, value] of formData.entries()) {
-                if (key.endsWith('[]')) {
-                    const realKey = key.slice(0, -2);
-                    if (!data[realKey]) data[realKey] = [];
-                    data[realKey].push(value);
-                } else {
-                    data[key] = value;
-                }
-            }
-            
-            // Гарантируем чекбоксы
-            if (!data.contract) data.contract = 'on';
-            if (!data.consent) data.consent = 'on';
-            
-            console.log('Данные:', data);
-            
-            try {
-                const response = await fetch('../api.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify(data)
-                });
-                
-                const result = await response.json();
-                console.log('Ответ:', result);
-                
-                if (response.ok) {
-                    alert(`✅ Данные сохранены!\n\nЛогин: ${result.login}\nПароль: ${result.password}\n\nСохраните эти данные для входа.\n\nПрофиль: ${result.profile_url}`);
-                    window.location.href = result.profile_url;
-                } else if (result.errors) {
-                    let msg = '❌ Ошибки валидации:\n';
-                    for (let field in result.errors) {
-                        msg += `- ${result.errors[field]}\n`;
-                    }
-                    alert(msg);
-                } else {
-                    alert('❌ Ошибка: ' + (result.error || 'Неизвестная ошибка'));
-                }
-            } catch (err) {
-                console.error('Fetch error:', err);
-                alert('❌ Ошибка сети. Отправляем обычным способом.');
-                form.submit();
-            }
-        });
-    }
-})();
-</script>
-            <script>
-async function sendFormData() {
-    console.log('Функция sendFormData вызвана');
-    
-    const form = document.getElementById('supportForm');
-    const formData = new FormData(form);
-    const data = {};
-    
-    for (let [key, value] of formData.entries()) {
-        if (key.endsWith('[]')) {
-            const realKey = key.slice(0, -2);
-            if (!data[realKey]) data[realKey] = [];
-            data[realKey].push(value);
-        } else {
-            data[key] = value;
-        }
-    }
-    
-    data.contract = 'on';
-    data.consent = 'on';
-    
-    console.log('Отправляем:', data);
-    
-    try {
-        const response = await fetch('../api.php', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(data)
-        });
-        
-        const result = await response.json();
-        
-        if (response.ok) {
-            alert(`✅ Данные сохранены!\nЛогин: ${result.login}\nПароль: ${result.password}`);
-            window.location.href = result.profile_url;
-        } else if (result.errors) {
-            let msg = 'Ошибки:\n';
-            for (let f in result.errors) msg += `- ${result.errors[f]}\n`;
-            alert(msg);
-        } else {
-            alert('Ошибка: ' + (result.error || 'Неизвестная ошибка'));
-        }
-    } catch (err) {
-        console.error(err);
-        alert('Ошибка сети');
-        form.submit();
-    }
-}
-</script>
 </body>
 </html>
