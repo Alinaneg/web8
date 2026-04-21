@@ -565,7 +565,8 @@ require_once __DIR__ . '/../init.php';
             <div class="container">
                 <h2>Оставить заявку</h2>
                 
-                <form method="POST" action="../index.php">
+             <form method="POST" action="../index.php">
+    <input type="hidden" name="csrf_token" value="<?= generateCsrfToken() ?>">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="fullName">ФИО *</label>
