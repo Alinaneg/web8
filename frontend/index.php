@@ -664,13 +664,14 @@
     <script>
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('supportForm');
-    const apiUrl = form?.getAttribute('data-api-url');
+    const apiUrl = '../api.php';
     
-    if (!form || !apiUrl) return;
+    if (!form) return;
     
     form.addEventListener('submit', async function(e) {
         e.preventDefault();
         
+        // Собираем данные в объект
         const formData = new FormData(form);
         const data = {};
         
@@ -684,20 +685,25 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
+        // Добавляем чекбоксы, если их нет (для безопасности)
         if (!data.contract) data.contract = 'on';
         if (!data.consent) data.consent = 'on';
+        
+        console.log('Отправляем:', data);
         
         try {
             const response = await fetch(apiUrl, {
                 method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+                headers: { 
+                    'Content-Type': 'application/json'
+                },
                 body: JSON.stringify(data)
             });
             
             const result = await response.json();
             
             if (response.ok) {
-                alert(`✅ Данные сохранены!\n\nЛогин: ${result.login}\nПароль: ${result.password}\n\nСохраните эти данные для входа в личный кабинет.\n\nПрофиль: ${result.profile_url}`);
+                alert(`✅ Данные сохранены!\n\nЛогин: ${result.login}\nПароль: ${result.password}\n\nСохраните эти данные для входа.\n\nПрофиль: ${result.profile_url}`);
                 window.location.href = result.profile_url;
             } else {
                 if (result.errors) {
@@ -711,7 +717,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             }
         } catch (err) {
-            console.error(err);
+            console.error('Fetch error:', err);
             alert('❌ Ошибка сети. Форма будет отправлена обычным способом.');
             form.submit();
         }
