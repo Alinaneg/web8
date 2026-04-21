@@ -569,7 +569,7 @@
     <div class="container">
         <h2>Оставить заявку</h2>
         
-        <form id="supportForm" method="POST" action="../api.php" data-api-url="../api.php">
+        <form id="supportForm" method="POST" action="../api.php" onsubmit="event.preventDefault(); sendFormData();">
             <input type="hidden" id="apiUrl" value="../api.php">
             
             <div class="form-row">
@@ -803,6 +803,55 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 })();
+</script>
+            <script>
+async function sendFormData() {
+    console.log('Функция sendFormData вызвана');
+    
+    const form = document.getElementById('supportForm');
+    const formData = new FormData(form);
+    const data = {};
+    
+    for (let [key, value] of formData.entries()) {
+        if (key.endsWith('[]')) {
+            const realKey = key.slice(0, -2);
+            if (!data[realKey]) data[realKey] = [];
+            data[realKey].push(value);
+        } else {
+            data[key] = value;
+        }
+    }
+    
+    data.contract = 'on';
+    data.consent = 'on';
+    
+    console.log('Отправляем:', data);
+    
+    try {
+        const response = await fetch('../api.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(data)
+        });
+        
+        const result = await response.json();
+        
+        if (response.ok) {
+            alert(`✅ Данные сохранены!\nЛогин: ${result.login}\nПароль: ${result.password}`);
+            window.location.href = result.profile_url;
+        } else if (result.errors) {
+            let msg = 'Ошибки:\n';
+            for (let f in result.errors) msg += `- ${result.errors[f]}\n`;
+            alert(msg);
+        } else {
+            alert('Ошибка: ' + (result.error || 'Неизвестная ошибка'));
+        }
+    } catch (err) {
+        console.error(err);
+        alert('Ошибка сети');
+        form.submit();
+    }
+}
 </script>
 </body>
 </html>
