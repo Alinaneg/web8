@@ -1583,23 +1583,43 @@ textarea {
     animation: tariffSelect 0.3s ease;
 }
 
+/* ==============================================
+   ТЁМНАЯ ФОРМА
+   ============================================== */
+
+/* Контейнер формы */
 .contact-form {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 50%, #0f172a 100%);
     position: relative;
     padding: 80px 0;
 }
 
+/* Добавляем звёздочки на фон (опционально) */
+.contact-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    background-size: 30px 30px;
+    pointer-events: none;
+}
+
 .contact-form .container {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(15, 23, 42, 0.95);
+    backdrop-filter: blur(2px);
     border-radius: 30px;
     padding: 50px 40px;
     max-width: 700px;
     margin: 0 auto;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .contact-form h2 {
-    color: #2d3748;
+    color: white;
     font-size: 2rem;
     margin-bottom: 30px;
     text-align: center;
@@ -1611,7 +1631,7 @@ textarea {
     display: block;
     width: 60px;
     height: 4px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
     margin: 15px auto 0;
     border-radius: 2px;
 }
@@ -1624,7 +1644,7 @@ textarea {
 .contact-form .form-group label {
     display: block;
     font-weight: 600;
-    color: #2d3748;
+    color: #cbd5e1;
     margin-bottom: 8px;
     font-size: 0.9rem;
 }
@@ -1634,23 +1654,30 @@ textarea {
 .contact-form select {
     width: 100%;
     padding: 14px 18px;
-    border: 2px solid #e2e8f0;
+    border: 2px solid #334155;
     border-radius: 12px;
     font-size: 1rem;
     transition: all 0.3s ease;
-    background: #f8fafc;
+    background: #1e293b;
     font-family: inherit;
+    color: white;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: #64748b;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus,
 .contact-form select:focus {
     outline: none;
-    border-color: #667eea;
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-    background: white;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.2);
+    background: #0f172a;
 }
 
+/* Radio группа */
 .contact-form .radio-group {
     display: flex;
     gap: 30px;
@@ -1662,19 +1689,22 @@ textarea {
     align-items: center;
     gap: 8px;
     cursor: pointer;
-    color: #4a5568;
+    color: #cbd5e1;
     font-weight: 500;
 }
 
 .contact-form .radio-label input[type="radio"] {
     width: 18px;
     height: 18px;
-    accent-color: #667eea;
+    accent-color: #60a5fa;
 }
 
+/* Select multiple */
 .contact-form select[multiple] {
     min-height: 140px;
     padding: 10px;
+    background: #1e293b;
+    color: white;
 }
 
 .contact-form select[multiple] option {
@@ -1682,13 +1712,16 @@ textarea {
     border-radius: 8px;
     margin: 2px 0;
     cursor: pointer;
-}
-
-.contact-form select[multiple] option:checked {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: #1e293b;
     color: white;
 }
 
+.contact-form select[multiple] option:checked {
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+    color: white;
+}
+
+/* Чекбоксы */
 .contact-form .checkbox-group {
     display: flex;
     align-items: flex-start;
@@ -1701,19 +1734,20 @@ textarea {
     width: 20px;
     height: 20px;
     margin-top: 2px;
-    accent-color: #667eea;
+    accent-color: #60a5fa;
 }
 
 .contact-form .checkbox-group label {
     font-weight: 500;
-    color: #2d3748;
+    color: #cbd5e1;
     cursor: pointer;
     line-height: 1.4;
 }
 
+/* Кнопка отправки */
 .contact-form .btn-submit {
     width: 100%;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
     color: white;
     border: none;
     padding: 16px 32px;
@@ -1723,93 +1757,109 @@ textarea {
     cursor: pointer;
     transition: all 0.3s ease;
     margin-top: 20px;
-    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.3);
+    box-shadow: 0 10px 25px rgba(96, 165, 250, 0.3);
 }
 
 .contact-form .btn-submit:hover {
     transform: translateY(-3px);
-    box-shadow: 0 15px 35px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 15px 35px rgba(96, 165, 250, 0.4);
 }
 
 .contact-form .btn-submit:active {
     transform: translateY(0);
 }
 
+/* Подсказки */
 .contact-form .hint {
     display: block;
     font-size: 0.75rem;
-    color: #718096;
+    color: #94a3b8;
     margin-top: 6px;
     margin-left: 5px;
 }
 
+/* Сообщения об ошибках */
 .contact-form .error-hint {
     display: block;
     font-size: 0.75rem;
-    color: #e53e3e;
+    color: #f87171;
     margin-top: 6px;
     margin-left: 5px;
     font-weight: 500;
 }
 
 .contact-form .error-field {
-    border-color: #f56565 !important;
-    background-color: #fff5f5 !important;
+    border-color: #f87171 !important;
+    background-color: rgba(248, 113, 113, 0.1) !important;
 }
 
+/* Контактная информация */
 .contact-form .contact-info {
     text-align: center;
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 2px dashed #e2e8f0;
+    border-top: 2px dashed #334155;
 }
 
 .contact-form .contact-info p {
     margin: 10px 0;
     font-size: 1rem;
-    color: #4a5568;
+    color: #cbd5e1;
 }
 
 .contact-form .contact-info i {
     margin-right: 10px;
-    color: #667eea;
+    color: #60a5fa;
     width: 25px;
 }
 
-
+/* Ссылки (теперь видимые) */
 .contact-form .auth-links {
     text-align: center;
     margin-top: 30px;
     padding-top: 20px;
-    border-top: 1px solid #e2e8f0;
+    border-top: 1px solid #334155;
 }
 
 .contact-form .auth-links p {
-    margin: 10px 0;
+    margin: 12px 0;
 }
 
 .contact-form .auth-links a {
-    color: #667eea;
+    color: #60a5fa;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s;
 }
 
 .contact-form .auth-links a:hover {
-    color: #764ba2;
+    color: #a78bfa;
     text-decoration: underline;
 }
 
 .contact-form .admin-link {
     font-size: 0.75rem;
-    color: #a0aec0 !important;
+    color: #64748b !important;
 }
 
 .contact-form .admin-link:hover {
-    color: #718096 !important;
+    color: #94a3b8 !important;
 }
 
+/* Сообщение об успехе */
+.form-message.success {
+    background: rgba(34, 197, 94, 0.2);
+    border: 1px solid #22c55e;
+    color: #4ade80;
+}
 
+.form-message.error {
+    background: rgba(239, 68, 68, 0.2);
+    border: 1px solid #ef4444;
+    color: #f87171;
+}
+
+/* Адаптивность */
 @media (max-width: 640px) {
     .contact-form .container {
         padding: 30px 20px;
